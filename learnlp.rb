@@ -17,18 +17,18 @@ load 'config.file'
 def drawBoard(x)
   # Ideally here I'd print the frame number. 
   # Manually print the guide numbers.
-  puts "  1  2  3  4  5  6  7  8"
+  puts "  a  b  c  d  e  f  g  h"
   #Loop through 8 letter guide coordinates.
-  ('a'..'h').each do |letter|
+  (1..8).each do |number|
     # Print the guide letters
-    print letter
+    print number
     # Loop through 8 guide coordinates.
-    (1..8).each do |number|
+    ('a'..'h').each do |letter|
       # Apply the default string to any Hash values which have not yet been populated.
       x.default = BLANK
       # The only, actually substantive part of this program.
       # Print the grid from the Array of Hash Objects.
-      print x["#{letter}#{number}"]
+      print x["#{number}#{letter}"]
     end
   puts  # end the line
   end

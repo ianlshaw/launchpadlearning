@@ -1,10 +1,10 @@
 # Variables
 # Each frame is a hash of coordiates which should be hit.
 #@frame1 = Hash["a1" => HIT, "a2" => HIT, "h7" => HIT]
-@frame1 = Hash["a1" => HIT, "a2" => HIT, "h7" => HIT]
-@frame2 = Hash["b4" => HIT, "c8" => HIT]
-@frame3 = Hash["c2" => HIT, "e1" => HIT, "b1" => HIT]
-@frame4 = Hash["h1" => HIT, "h2" => HIT, "f8" => HIT]
+@frame1 = Hash["1a" => HIT, "2a" => HIT, "7h" => HIT]
+@frame2 = Hash["4b" => HIT, "8c" => HIT]
+@frame3 = Hash["2c" => HIT, "1e" => HIT, "1b" => HIT]
+@frame4 = Hash["1h" => HIT, "2h" => HIT, "8f" => HIT]
 
 # Array of all the frame Hashes. 
 @frames = [@frame1, @frame2, @frame3, @frame4]
