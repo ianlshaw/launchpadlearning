@@ -19,11 +19,10 @@
 8[ ][ ][ ][ ][ ][ ][ ][ ]
 ```
 This shows the hash:
-`@frame1 = Hash["a1" => HIT, "a2" => HIT, "h7" => HIT]`
+`@frame1 = Hash["h1" => HIT, "h2" => HIT, "f8" => HIT]`
 
 ### To Do:
 1. config file parsing
 2. argument passing
 3. Frame number display
 4. backwards frame control
-
