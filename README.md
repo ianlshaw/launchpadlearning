@@ -5,11 +5,6 @@
 ##### `ruby learnlp.rb CONFIG_FILE`
 
 
-### To Do:
-config file parsing
-argument passing
-Frame number display
-backwards frame control
 
 ### Example Grid
 ```
@@ -25,3 +20,10 @@ backwards frame control
 ```
 This shows the hash:
 `@frame1 = Hash["a1" => HIT, "a2" => HIT, "h7" => HIT]`
+
+### To Do:
+1. config file parsing
+2. argument passing
+3. Frame number display
+4. backwards frame control
+
