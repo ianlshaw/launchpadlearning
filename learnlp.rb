@@ -27,17 +27,26 @@ BLANK = "[ ]"
 @frame2.default = BLANK
 
 # list of all the frames. 
-@frames = ""
+# This is horrible, it should be an array of ints, since "frame" won't change.
+@frames = ["frame1", "frame2"]
 
 # Functions
-def drawBoard
-      ('a'..'h').each do |letter|
-        (1..8).each do |i|
-        print @frame1["#{letter}#{i}"]
-        end
-      puts  # end the line
-      end
+# This is the main piece of ninjitsu in this program.
+def drawBoard(frame)
+  ('a'..'h').each do |letter|
+    (1..8).each do |i|
+      print @frame1["#{letter}#{i}"]
+    end
+  puts  # end the line
+  end
 end
 
 # Main
-drawBoard
+@frames.each do |x|
+  # Clear the screen before starting.
+  system ("clear")
+  # Draw the grid
+  drawBoard(x)
+  # Wait for input from the user before moving onto the next frame
+  gets.chomp
+end
