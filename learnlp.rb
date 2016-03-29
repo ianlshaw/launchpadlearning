@@ -9,7 +9,7 @@ TEMPO = 1
 HIT = "[*]"
 BLANK = "[ ]"
 
-# Incase people like this idea.
+# Load the config file
 load 'config.file'
 
 # Functions
