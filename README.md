@@ -2,7 +2,7 @@
 
 ### Usage
 
-##### `ruby launchpadlearning.rb CONFIG_FILE`
+##### `ruby learnlp.rb CONFIG_FILE`
 
 
 ### To Do:
