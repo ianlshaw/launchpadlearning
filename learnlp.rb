@@ -28,7 +28,7 @@ def drawBoard(frame)
       frame.default = BLANK
       # The only, actually substantive part of this program.
       # Print the grid from the Array of Hash Objects.
-      print frame["#{number}#{letter}"]
+      print frame["#{letter}#{number}"]
     end
   puts  # end the line
   end
