@@ -14,7 +14,7 @@ load 'config.file'
 
 # Functions
 # This is the main piece of ninjitsu in this program.
-def drawBoard(x)
+def drawBoard(frame)
   # Ideally here I'd print the frame number. 
   # Manually print the guide numbers.
   puts "  a  b  c  d  e  f  g  h"
@@ -25,10 +25,10 @@ def drawBoard(x)
     # Loop through 8 guide coordinates.
     ('a'..'h').each do |letter|
       # Apply the default string to any Hash values which have not yet been populated.
-      x.default = BLANK
+      frame.default = BLANK
       # The only, actually substantive part of this program.
       # Print the grid from the Array of Hash Objects.
-      print x["#{number}#{letter}"]
+      print frame["#{number}#{letter}"]
     end
   puts  # end the line
   end
