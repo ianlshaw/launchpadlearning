@@ -1,0 +1,3 @@
+# Commented out for now, depends on user reaction to complexity of setup.
+# @frame1 = Hash["a1" => HIT, "a2" => HIT, "h7" => HIT]
+
