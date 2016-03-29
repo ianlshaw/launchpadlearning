@@ -30,8 +30,10 @@ def drawBoard(frame)
       # Print the grid from the Array of Hash Objects.
       print frame["#{letter}#{number}"]
     end
+  print number
   puts  # end the line
   end
+  puts "  a  b  c  d  e  f  g  h"
 end
 
 # Loop through every member of @frames
