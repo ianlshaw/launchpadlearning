@@ -10,8 +10,6 @@ COORDS = 64
 # Time in seconds between frames.
 TEMPO = 1
 
-BLANK_FRAME_DEFAULT = " "
-
 # These are the strings which will be printed to the terminal
 HIT = "[*]"
 BLANK = "[ ]"
@@ -19,34 +17,40 @@ BLANK = "[ ]"
 # Variables
 # Each frame is a hash of ac://monitor.thirtythreebuild.co.uk/icinga/cgi-bin/tac.cgitive coordinates.
 @frame1 = Hash["a1" => HIT, "a2" => HIT, "h7" => HIT]
-
-# This can maybe be autopopulated once we have a list of frames.
-@frame1.default = BLANK
-
 @frame2 = Hash["b4" => HIT, "c8" => HIT]
-@frame2.default = BLANK
+@frame3 = Hash["c2" => HIT, "e1" => HIT, "b1" => HIT]
 
-# list of all the frames. 
-@frames = [1, 2]
+# Array of all the frames. 
+@frames = [@frame1, @frame2, @frame3]
 
 # Functions
 # This is the main piece of ninjitsu in this program.
 def drawBoard(x)
-  puts "Frame #: " + x.to_s
   ('a'..'h').each do |letter|
     (1..8).each do |i|
-      print @frame1["#{letter}#{i}"]
+
+      # Apply the default string to any Hash values which have not yet been populated.
+      x.default = BLANK
+
+      # The only, actually substantive part of this program.
+      # Print the grid from the Array of Hash Objects.
+      print x["#{letter}#{i}"]
     end
   puts  # end the line
   end
 end
 
-# Main
-@frames.each do |x|
-  # Clear the screen before starting.
-  system ("clear")
-  # Draw the grid
-  drawBoard(x)
-  # Wait for input from the user before moving onto the next frame
-  gets.chomp
+def frameLoop
+  # Loop through every member of @frames
+  @frames.each do |x|
+    # Clear the screen before starting.
+    system ("clear")
+    # Draw the grid
+    drawBoard(x)
+    # Wait for input from the user before moving onto the next frame
+    gets.chomp
+  end
 end
+
+# Main
+frameLoop
