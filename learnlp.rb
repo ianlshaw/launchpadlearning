@@ -9,19 +9,8 @@ TEMPO = 1
 HIT = "[*]"
 BLANK = "[ ]"
 
-# Variables
-# Each frame is a hash of coordiates which should be hit.
-#@frame1 = Hash["a1" => HIT, "a2" => HIT, "h7" => HIT]
-@frame1 = Hash["a1" => HIT, "a2" => HIT, "h7" => HIT]
-@frame2 = Hash["b4" => HIT, "c8" => HIT]
-@frame3 = Hash["c2" => HIT, "e1" => HIT, "b1" => HIT]
-@frame4 = Hash["h1" => HIT, "h2" => HIT, "f8" => HIT]
-
 # Incase people like this idea.
 load 'config.file'
-
-# Array of all the frame Hashes. 
-@frames = [@frame1, @frame2, @frame3, @frame4]
 
 # Functions
 # This is the main piece of ninjitsu in this program.
