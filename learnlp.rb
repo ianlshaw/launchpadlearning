@@ -27,12 +27,12 @@ BLANK = "[ ]"
 @frame2.default = BLANK
 
 # list of all the frames. 
-# This is horrible, it should be an array of ints, since "frame" won't change.
-@frames = ["frame1", "frame2"]
+@frames = [1, 2]
 
 # Functions
 # This is the main piece of ninjitsu in this program.
-def drawBoard(frame)
+def drawBoard(x)
+  puts "Frame #: " + x.to_s
   ('a'..'h').each do |letter|
     (1..8).each do |i|
       print @frame1["#{letter}#{i}"]
