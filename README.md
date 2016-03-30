@@ -25,5 +25,4 @@ This shows the hash:
 ### To Do:
 1. config file parsing
 2. argument passing
-3. Frame number display
-4. backwards frame control
+3. backwards frame control

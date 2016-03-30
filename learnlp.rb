@@ -9,6 +9,9 @@ TEMPO = 1
 HIT = "[*]"
 BLANK = "[ ]"
 
+COLUMNS = '  a  b  c  d  e  f  g  h'
+
+
 # Load the config file
 load 'config.file'
 
@@ -17,7 +20,7 @@ load 'config.file'
 def drawBoard(frame)
   # Ideally here I'd print the frame number. 
   # Manually print the guide numbers.
-  puts "  a  b  c  d  e  f  g  h"
+  puts COLUMNS 
   #Loop through 8 letter guide coordinates.
   (1..8).each do |number|
     # Print the guide letters
@@ -33,18 +36,22 @@ def drawBoard(frame)
   print number
   puts  # end the line
   end
-  puts "  a  b  c  d  e  f  g  h"
+  puts COLUMNS
 end
 
 # Loop through every member of @frames
 def frameLoop
+  count = 1
   @frames.each do |frame|
     # Clear the screen before starting.
     system ("clear")
+    #Print the frame number
+    puts "Frame #: " + count.to_s
     # Draw the grid, call drawBoard method, passing frame index as argument.
     drawBoard(frame)
     # Wait for input from the user before moving onto the next frame
     gets.chomp
+    count += 1
   end
 end
 
