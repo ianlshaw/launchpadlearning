@@ -55,8 +55,6 @@ end
 def frameLoop
   count = 1
   @frames.each do |frame|
-    # Clear the screen before starting.
-    system ("clear")
     #Print the frame number
     puts "Frame #: " + count.to_s
     # Draw the grid, call drawBoard method, passing frame index as argument.
