@@ -4,7 +4,8 @@
 
 ##### `ruby learnlp.rb CONFIG_FILE`
 
-
+Included is `example.config`, therefore to run the program against this config file use:
+`ruby learnlp.rb example.config`
 
 ### Example Grid
 ```
