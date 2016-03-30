@@ -1,6 +1,5 @@
 #!/usr/bin/ruby
 
-
 # Constants
 
 # Usage string
