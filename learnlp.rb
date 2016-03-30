@@ -1,5 +1,10 @@
 #!/usr/bin/ruby
 
+if ARGV.length < 1 || ARGV.length > 1 
+  
+  exit()
+end
+
 # Constants
 
 # Time in seconds between frames.
@@ -11,9 +16,9 @@ BLANK = "[ ]"
 
 COLUMNS = '  a  b  c  d  e  f  g  h'
 
-
 # Load the config file
-load 'config.file'
+CONFIG = ARGV[0].chomp
+load "#{CONFIG}"
 
 # Functions
 # This is the main piece of ninjitsu in this program.
@@ -33,6 +38,7 @@ def drawBoard(frame)
       # Print the grid from the Array of Hash Objects.
       print frame["#{letter}#{number}"]
     end
+  # Right had guide column
   print number
   puts  # end the line
   end
@@ -50,7 +56,7 @@ def frameLoop
     # Draw the grid, call drawBoard method, passing frame index as argument.
     drawBoard(frame)
     # Wait for input from the user before moving onto the next frame
-    gets.chomp
+    STDIN.gets
     count += 1
   end
 end
