@@ -1,11 +1,19 @@
 #!/usr/bin/ruby
 
+
+# Constants
+
+# Usage string
+USAGE = 'learnlp.rb FILENAME'
+
+# Verify argument
 if ARGV.length < 1 || ARGV.length > 1 
-  
+  puts USAGE  
   exit()
 end
 
-# Constants
+# Take the first argument as a string
+CONFIG = ARGV[0].chomp
 
 # Time in seconds between frames.
 TEMPO = 1
@@ -17,7 +25,6 @@ BLANK = "[ ]"
 COLUMNS = '  a  b  c  d  e  f  g  h'
 
 # Load the config file
-CONFIG = ARGV[0].chomp
 load "#{CONFIG}"
 
 # Functions
