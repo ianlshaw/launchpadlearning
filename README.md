@@ -23,8 +23,6 @@ This shows the hash:
 `@frame1 = Hash["h1" => HIT, "h2" => HIT, "f8" => HIT]`
 
 ### To Do:
-1. config file parsing
-2. argument passing
-3. backwards frame control
-4. config files as arrays of just coords, instead of the hash crap I've got right now
-5. config file generator - from what ... hmmm
+1. backwards frame control
+2. config files as arrays of just coords, instead of the hash crap I've got right now
+3. config file generator - from what ... hmmm
