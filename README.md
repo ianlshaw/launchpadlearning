@@ -24,6 +24,8 @@ Included is `example.config`, therefore to run the program against this config f
 This shows the hash:
 `@frame1 = Hash["h1" => HIT, "h2" => HIT, "f8" => HIT]`
 
+##### [![Video Example](https://asciinema.org/a/43656.png)](https://asciinema.org/a/43656)
+
 ### To Do:
 1. backwards frame control
 2. config files as arrays of just coords, instead of the hash crap I've got right now
